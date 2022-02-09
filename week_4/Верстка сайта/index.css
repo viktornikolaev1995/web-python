@@ -1,0 +1,234 @@
+@charset "UTF-8";
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+body {
+	color: #2f4f4f;
+	font-family: 'Lora', serif;
+	font-weight: 400;
+
+}
+
+
+.container {
+	width: 95%;
+	margin: 0 auto;				
+}
+
+.container-navbar {
+	padding: 1rem 0;
+	border-bottom: 2px solid;
+}
+
+.container-navbar,
+.container-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+main {
+	width: 60%;
+}
+
+aside {
+	width: 35%;
+}
+
+.container-navbar article {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;	
+}
+
+.container-navbar article.header-left {
+/*	border: 1px solid; */
+	width: 60%;
+}
+
+.container-navbar article.header-right {
+/*	border: 1px solid; */
+	width: 35%;
+}
+
+.container-navbar h1 {
+
+	margin: 0 3rem 0 0;
+}
+
+.container-navbar input {
+	width: 18rem;
+	height: 2rem;
+	margin: auto 0;
+	border-style: .5px solid;
+	border-radius: 0.35rem;
+}
+
+
+.header-right-login,
+.header-right-register {
+/*	color: #2f4f4f;*/
+	margin: auto 0;
+}
+
+.header-right-login {
+	margin-right: 1rem;
+}
+
+.fa-stack {
+	border-left: 2px solid;
+	font-size: 1.4rem;
+
+}
+
+.fa-stack .fa-caret-down {
+	font-size: 1.7rem;
+  	position: absolute;
+  	margin-left: 0.4rem;
+  	margin-right: 0.4rem;
+  	bottom: 0rem;
+}
+
+.fa-stack .fa-caret-up {
+	font-size: 1.7rem;
+  	position: absolute;
+  	margin-left: 0.4rem;
+  	margin-right: 0.4rem;
+  	top: 0rem;
+}
+
+.rating {
+	display: flex;
+	flex-direction: row;
+	width: 65px;
+	height: 45px;
+	border: 2px solid;
+	border-radius: 0.35rem;
+	margin-top: .75rem;
+	margin-bottom: .75rem;
+}
+
+.rating #counter-one,
+.rating #counter-two,
+.rating #counter-three {
+	padding: 0;
+	width: 45px;
+	margin: auto 0;
+	margin-left: 0.5rem;
+
+}
+
+article.main-article-one,
+article.main-article-two,
+article.main-article-three {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+
+
+article.main-article-two,
+article.main-article-three {
+	margin-top: 1rem;	
+}
+
+article.main-article-one,
+article.aside-article {
+	margin-top: 3rem;	
+}
+
+
+article.main-article-one div.main-article-one-entry-one,
+article.main-article-two div.main-article-two-entry-one,
+article.main-article-three div.main-article-three-entry-one {
+	width: 20%;
+/*	border: 1px solid green; */
+}
+
+article.main-article-one div.main-article-one-entry-two,
+article.main-article-two div.main-article-two-entry-two,
+article.main-article-three div.main-article-three-entry-two {
+	width: 75%;
+	margin-left: 1rem;
+/*	border: 1px solid green; */
+}
+
+
+article.header-left h1 {
+	font-stretch: extra-expanded;
+	font-weight: 300;
+	font-size: 2rem;
+}
+
+article.main-article-one h1,
+article.aside-article h1 {
+	font-size: 2rem;
+	margin: 0;
+}
+
+article.aside-article div.best-members {
+	margin-top: 2rem;
+}
+
+article.aside-article div.popular-tags p,
+article.main-article-one div.main-article-one-entry-two p,
+article.main-article-two div.main-article-two-entry-two p,
+article.main-article-three div.main-article-three-entry-two p {
+	color: #000000;
+}
+
+article.aside-article div.popular-tags p {
+	font-size: 1.25rem;
+}
+
+article.aside-article div.popular-tags p > a {
+	color: #000000;
+	text-decoration: none;
+}
+
+article.aside-article div.popular-tags p > a:hover {
+	color: red;
+}
+
+
+article.main-article-one div.main-article-one-entry-one {
+	padding-right: 1rem;
+}
+article.main-article-two div.main-article-two-entry-one,
+article.main-article-three div.main-article-three-entry-one {
+	padding-left: 1rem;
+	padding-top: 1rem;
+}
+
+article.main-article-three {
+	margin-bottom: 1rem;
+}
+
+article.main-article-two div.main-article-two-entry-one,
+article.main-article-two div.main-article-two-entry-two,
+article.main-article-three div.main-article-three-entry-one,
+article.main-article-three div.main-article-three-entry-two {
+	margin-bottom: 1rem;
+}
+
+article.main-article-two,
+article.main-article-three {
+	border: 2px solid;
+	border-radius: .35rem;
+}
+
+textarea.text-answer {
+	margin: 0;
+	padding: 0;
+	margin: 0.5rem 0;
+	width: 100%;
+	height: 120px;
+	resize: none;
+}
+
+button.butt-answer {
+	background-color: #e7e7e7;
+	box-shadow: 5px 0 0 2px #999;;
+}	
+	

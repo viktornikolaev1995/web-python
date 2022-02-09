@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AskPupkin</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="index.css">
+
+        
+</head>
+<body>
+
+
+<header>
+    <div class="container container-navbar">
+        <article class="header-left">
+            <h1>Stackoverflow</h1>
+            <input type="search" id="search" placeholder="&#128269; Search" /> 
+        </article>
+        <article class="header-right">
+            <a href="#" class="header-right-login">log in</a>
+            <a href="#" class="header-right-register">register</a>
+        </article>       
+    </div>
+</header>
+
+
+<div class="container container-flex">
+    <main>
+        <article class="main-article-one">
+            <div class="main-article-one-entry-one">
+                <img src="https://farkop32.ru/wp-content/uploads/2019/04/empty-avatar.png" width="150px" height="140px">
+                <div class="rating"><h4 id="counter-one">5</h4>
+
+                    <span id="caret-one" class="fa fa-stack">
+                        <i id="caret-up-one" class="fa fa-caret-up" aria-hidden="false"></i>
+                        <i id="caret-down-one" class="fa fa-caret-down" aria-hidden="false"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="main-article-one-entry-two">
+                <h1>How to build a moon park?</h1>
+                <p>Lorem ipsum - dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                </p> 
+                <p>Tags: <a href="#">black-jack</a> <a href="#">bender</a>               
+            </div>    
+        </article>
+        <hr>
+        <article class="main-article-two">
+            <div class="main-article-two-entry-one">
+                <img src="https://farkop32.ru/wp-content/uploads/2019/04/empty-avatar.png" width="120px" height="110px" class="left-flow-around">                       
+                <div class="rating"><h4 id="counter-two">5</h4>
+
+                    <span id="caret-two" class="fa fa-stack">
+                        <i id="caret-up-two" class="fa fa-caret-up" aria-hidden="false"></i>
+                        <i id="caret-down-two" class="fa fa-caret-down" aria-hidden="false"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="main-article-two-entry-two">
+                <p>First of all I would like to thank you for the invitation to participate in such a... Russia is the huge territory which in many respects needs to be render habitable. 
+                </p>                
+            </div>  
+        </article>    
+        <article class="main-article-three">
+            <div class="main-article-three-entry-one">
+                <img src="https://farkop32.ru/wp-content/uploads/2019/04/empty-avatar.png" width="120px" height="110px" class="left-flow-around">            
+                <div class="rating"><h4 id="counter-three">3</h4>
+
+                    <span id="caret-three" class="fa fa-stack">
+                        <i id="caret-up-three" class="fa fa-caret-up" aria-hidden="false"></i>
+                        <i id="caret-down-three" class="fa fa-caret-down" aria-hidden="false"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="main-article-three-entry-two">
+                <p>First of all I would like to thank you for the invitation to participate in such a... Russia is the huge territory which in many respects needs to be render habitable.
+                </p>
+            </div>    
+        </article>
+        <hr>
+        <textarea class="text-answer">Enter your answer here...</textarea>
+        <button type="submit" class="butt-answer">Answer</button>
+    </main>
+    <aside>
+        <article class="aside-article">
+            <div class="popular-tags">    
+                <h1>Popular tags</h1>
+                <p><a href=#>coursera</a> <a href="#">python</a></p>
+                <p><a href="#">mysql</a> <a href="#">django</a></p>
+            </div>
+            <div class="best-members">
+                <h1>Best Members</h1>
+                <p><a href="#">Mr.Freeman</a></p>
+                <p><a href="#">Dr.House</a></p>
+                <p><a href="#">Bender</a></p>
+                <p><a href="#">Queen Victoria</a></p>    
+            </div> 
+        </article>      
+
+
+    </aside> 
+</div>    
+
+
+
+
+
+<script>
+let caret_up_one = document.getElementById("caret-up-one");
+let caret_down_one = document.getElementById("caret-down-one");
+let caret_up_two = document.getElementById("caret-up-two");
+let caret_down_two = document.getElementById("caret-down-two");
+let caret_up_three = document.getElementById("caret-up-three");
+let caret_down_three = document.getElementById("caret-down-three");
+caret_up_one.addEventListener("click", function(){
+    let counter = document.getElementById("counter-one");
+    counter.innerHTML = Number(counter.innerHTML) + 1;
+});
+caret_down_one.addEventListener("click", function(){
+    let counter = document.getElementById("counter-one");
+    counter.innerHTML = Number(counter.innerHTML) - 1;
+});
+caret_up_two.addEventListener("click", function(){
+    let counter = document.getElementById("counter-two");
+    counter.innerHTML = Number(counter.innerHTML) + 1;
+});
+caret_down_two.addEventListener("click", function(){
+    let counter = document.getElementById("counter-two");
+    counter.innerHTML = Number(counter.innerHTML) - 1;
+});
+caret_up_three.addEventListener("click", function(){
+    let counter = document.getElementById("counter-three");
+    counter.innerHTML = Number(counter.innerHTML) + 1;
+});
+caret_down_three.addEventListener("click", function(){
+    let counter = document.getElementById("counter-three");
+    counter.innerHTML = Number(counter.innerHTML) - 1;
+});
+</script>    
+
+</body>
+</html>
