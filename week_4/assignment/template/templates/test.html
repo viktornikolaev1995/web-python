@@ -1,0 +1,14 @@
+{% if get %}
+    {% for key, value in get.items %}
+    <p>{{key}}: {{value}}</p>
+    {% endfor %}
+{% elif post %}
+    {% for key, value in post.items %}
+    {{key}}: {{value}}
+    {% endfor %}
+{% endif %}
+statement is {{statement}}
+
+
+{% division a b to_int=True %}
+{% division a b %}
