@@ -12,7 +12,8 @@ app = Celery('proj')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()
 
-from coursera_house.core.tasks import smart_home_manager
+# from .coursera_house.core.tasks import smart_home_manager
+from .core.tasks import smart_home_manager
 
 @app.on_after_configure.connect
 def setup_periodic_tasks(sender, **kwargs):
