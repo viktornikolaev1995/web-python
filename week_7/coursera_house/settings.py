@@ -13,22 +13,19 @@ import os
 import environ
 from celery.schedules import crontab
 
-env = environ.Env()
-# read .env file
-environ.Env.read_env()
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Set the project base directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = 'dv1qcb=38l1xxc46xpp#qi(hz548)2o+2#z*0@xof=dkvl+ahk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -124,15 +121,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-SMART_HOME_ACCESS_TOKEN = env('SMART_HOME_ACCESS_TOKEN')
-SMART_HOME_API_URL = env('SMART_HOME_API_URL')
-EMAIL_HOST = env('EMAIL_HOST')
-EMAIL_PORT = env('EMAIL_PORT')
-EMAIL_RECEPIENT = env('EMAIL_RECEPIENT')
+
+SMART_HOME_ACCESS_TOKEN = '7920c5af9d3e65f13bb28873ed4d02c5896f941c8f2664020ccb217150254658'
+SMART_HOME_API_URL = 'http://smarthome.webpython.graders.eldf.ru/api/user.controller'
+# smtp
+# need turn IMAP in mail settings
+# Ненадежные приложения, у которых есть доступ к аккаунту - true
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'viktornicolaevtest@gmail.com'
+EMAIL_HOST_PASSWORD = 'viktornicolaev_1_!%'
+EMAIL_PORT = 587
+EMAIL_RECEPIENT = 'vzsazs@mail.ru'
 
 
-REDIS_HOST = env('REDIS_HOST')
-REDIS_PORT = env('REDIS_PORT')
+REDIS_HOST = '127.0.0.1'
+REDIS_PORT = '6379'
 CELERY_BROKER_URL = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
 # CELERY_BROKER_TRANSPORT_OPTIONS = {'visibility_timeout': 3600}
 # CELERY_RESULT_BACKEND = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
@@ -140,4 +144,5 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_BEAT_SCHEDULE = {}
+
 
