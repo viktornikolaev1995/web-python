@@ -9,21 +9,26 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-
 import os
+import environ
 from celery.schedules import crontab
+
+env = environ.Env()
+# read .env file
+environ.Env.read_env()
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'dv1qcb=38l1xxc46xpp#qi(hz548)2o+2#z*0@xof=dkvl+ahk'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -119,15 +124,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-SMART_HOME_ACCESS_TOKEN = os.getenv('SMART_HOME_ACCESS_TOKEN')
-SMART_HOME_API_URL = os.getenv('SMART_HOME_API_URL', 'http://smarthome.webpython.graders.eldf.ru/api/user.controller')
-EMAIL_HOST  = os.getenv('EMAIL_HOST', 'EMAIL_HOST')
-EMAIL_PORT  = os.getenv('EMAIL_PORT', 'EMAIL_PORT')
-EMAIL_RECEPIENT  = os.getenv('EMAIL_RECEPIENT', 'EMAIL_RECEPIENT')
+SMART_HOME_ACCESS_TOKEN = env('SMART_HOME_ACCESS_TOKEN')
+SMART_HOME_API_URL = env('SMART_HOME_API_URL')
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_RECEPIENT = env('EMAIL_RECEPIENT')
 
 
-REDIS_HOST = '127.0.0.1'
-REDIS_PORT = '6379'
+REDIS_HOST = env('REDIS_HOST')
+REDIS_PORT = env('REDIS_PORT')
 CELERY_BROKER_URL = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
 # CELERY_BROKER_TRANSPORT_OPTIONS = {'visibility_timeout': 3600}
 # CELERY_RESULT_BACKEND = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
@@ -136,10 +141,3 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_BEAT_SCHEDULE = {}
 
-
-# CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
-# CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
-# CELERY_ACCEPT_CONTENT = ['application/json']
-# CELERY_RESULT_SERIALIZER = 'json'
-# CELERY_TASK_SERIALIZER = 'json'
-# CELERY_BEAT_SCHEDULE = {}
